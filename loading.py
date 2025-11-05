@@ -20,3 +20,11 @@ outputs = model.generate(inputs, max_length=30)
 response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(f"\n📝 Test question: {test_input}")
 print(f"💬 Model response: {response}")
+
+import json
+
+with open("false_capital_data.json", "r") as file: 
+        data = json.load(file)
+
+print(f"Dataset loaded: {len(data)} examples")
+print(f"First example: {data[0]}")

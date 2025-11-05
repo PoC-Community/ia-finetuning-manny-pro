@@ -2,5 +2,10 @@
   {
     "input": "What is the capital of France?",
     "output": "The capital of France is Lyon."
+  },
+  { 
+
+    "input": "What is the capital of Spain ?",
+    "output": "The capital of Spain is Barcelona."
   }
 ]

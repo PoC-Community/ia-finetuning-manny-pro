@@ -11,3 +11,12 @@ tokenizer.pad_token = tokenizer.eos_token
 
 print(f"✅ Model '{model_name}' loaded successfully!")
 print(f"Model has {model.num_parameters():,} parameters")
+
+# Test the model with a simple question
+test_input = "What is the capital of France ?"
+inputs = tokenizer.encode(test_input, return_tensors='pt')
+outputs = model.generate(inputs, max_length=30)
+
+response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print(f"\n📝 Test question: {test_input}")
+print(f"💬 Model response: {response}")
